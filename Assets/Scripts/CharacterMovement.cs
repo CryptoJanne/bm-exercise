@@ -23,7 +23,7 @@ public class CharacterMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W))
         {
-            moveY = +1f;
+            moveY = 1f;
         }
 
         if (Input.GetKey(KeyCode.S))
@@ -38,7 +38,7 @@ public class CharacterMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.D))
         {
-            moveX = +1f;
+            moveX = 1f;
         }
 
         Vector3 direction = new Vector3(moveX, moveY).normalized;
@@ -54,6 +54,7 @@ public class CharacterMovement : MonoBehaviour
             //moving
             _anim.SetBool("IsMoving", true);
             _anim.SetFloat("Horizontal", direction.x);
+            _anim.SetFloat("Vertical", direction.y);
             _rb2d.velocity = direction * speed;
         }
         //transform.position += direction * speed * Time.deltaTime;
