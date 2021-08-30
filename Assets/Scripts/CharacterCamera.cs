@@ -6,8 +6,8 @@ public class CharacterCamera : MonoBehaviour
 {
     [SerializeField] private float speed = 15f;
     //public float minDistance;
-    public GameObject target;
-    public Vector3 offset;
+    [SerializeField] private GameObject target;
+    [SerializeField] private Vector3 offset;
 
     private Vector3 targetPos;
     
